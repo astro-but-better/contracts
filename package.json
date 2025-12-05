@@ -1,0 +1,40 @@
+{
+  "name": "@astro-turf/contracts",
+  "version": "0.1.1-dev.0",
+  "description": "Astro-TURF theming + provider contract interfaces",
+  "author": "Stanislav Kim <stanislav.kim@gmail.com>",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/astro-but-better/contracts.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "engines": {
+    "node": ">=18"
+  },
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsc --project tsconfig.json",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "npm run clean && npm run build",
+    "dev-publish": "NEWVER=$(npm version prerelease --preid=dev --no-git-tag-version) && echo \"Publishing $NEWVER to @dev\" && npm publish --tag dev --access public"
+  },
+  "files": [
+    "dist"
+  ],
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  }
+}
