@@ -4,9 +4,11 @@
     "module": "ES2022",
     "moduleResolution": "bundler",
     "declaration": true,
-    "outDir": "dist",
+    "outDir": "./dist",
     "strict": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "emitDeclarationOnly": false,
+    "declarationMap": false,
   },
   "include": ["src"]
 }
