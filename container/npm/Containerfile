@@ -1,0 +1,6 @@
+FROM docker.io/library/node:20-alpine
+
+# Override Node's ENTRYPOINT so "sh" becomes the real executable
+ENTRYPOINT []
+
+WORKDIR /work
